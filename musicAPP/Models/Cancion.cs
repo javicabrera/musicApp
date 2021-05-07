@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace musicAPP
+namespace musicAPP.Models
 {
-    class Cancion
+    public class Cancion
     {
         public int Id { get; set; }
         public String Nombre { get; set; }
