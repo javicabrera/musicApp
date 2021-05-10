@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace musicAPP
 {
-    public partial class Form1 : Form
+    public partial class MusicApp : Form
     {
-        public Form1()
+        public MusicApp()
         {
             InitializeComponent();
+        }
+
+        /* Abrir buscador de archivos */
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            string fileName = openFileDialog1.FileName;
+
         }
     }
 }
