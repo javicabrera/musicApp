@@ -116,6 +116,7 @@
     <Compile Include="Models\ModelContext.cs" />
     <Compile Include="Models\Cancion.cs" />
     <Compile Include="Models\PlayList.cs" />
+    <Compile Include="Source\MediaInfoDLL.cs" />
     <Compile Include="Views\MusicApp.cs">
       <SubType>Form</SubType>
     </Compile>

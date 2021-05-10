@@ -1,4 +1,5 @@
-﻿using System;
+﻿using musicAPP.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,9 +21,10 @@ namespace musicAPP
         /* Abrir buscador de archivos */
         private void button1_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            string fileName = openFileDialog1.FileName;
-
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Archivos de Audio|*.wav;*.mp3;*.alac;*.ALAC;*.WAV;*.AAC;*.MP3;";
+            ofd.ShowDialog();
+            CancionController.SaveFile(ofd.FileName);
         }
     }
 }
