@@ -108,11 +108,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CancionController.cs" />
-    <Compile Include="Migrations\202105100037361_First-Migration.cs" />
-    <Compile Include="Migrations\202105100037361_First-Migration.designer.cs">
-      <DependentUpon>202105100037361_First-Migration.cs</DependentUpon>
+    <Compile Include="Migrations\202105130408515_Integracion-Modelo.cs" />
+    <Compile Include="Migrations\202105130408515_Integracion-Modelo.designer.cs">
+      <DependentUpon>202105130408515_Integracion-Modelo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CancionPlaylist.cs" />
     <Compile Include="Models\ModelContext.cs" />
     <Compile Include="Models\Cancion.cs" />
     <Compile Include="Models\PlayList.cs" />
@@ -125,8 +126,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\202105100037361_First-Migration.resx">
-      <DependentUpon>202105100037361_First-Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105130408515_Integracion-Modelo.resx">
+      <DependentUpon>202105130408515_Integracion-Modelo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MusicApp.resx">
       <DependentUpon>MusicApp.cs</DependentUpon>

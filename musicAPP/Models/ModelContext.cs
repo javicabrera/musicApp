@@ -11,6 +11,7 @@ namespace musicAPP.Models
     {
         public ModelContext() : base("name=local") { }
         public DbSet<Cancion> Canciones { get; set; }
-        public DbSet<PlayList> Listas { get; set; }
+        public DbSet<PlayList> PlayLists { get; set; }
+        public DbSet<CancionPlaylist> CancionPlaylists { get; set; }
     }
 }

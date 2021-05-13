@@ -19,7 +19,7 @@ namespace musicAPP.Controllers
             try
             {
                 var mediaInfo = new MediaInfo();
-                model.Nombre = mediaInfo.Option("Title");
+                model.Titulo = mediaInfo.Option("Title");
                 model.Album = "";
                 model.Ubicacion = path;
                 using(ModelContext db = new ModelContext())
