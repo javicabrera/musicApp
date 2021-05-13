@@ -13,7 +13,7 @@ namespace musicAPP.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202105130408515_Integracion-Modelo"; }
+            get { return "202105131432076_Integracion-Modelo"; }
         }
         
         string IMigrationMetadata.Source

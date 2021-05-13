@@ -21,15 +21,13 @@ namespace musicAPP
         /* Abrir buscador de archivos */
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Archivos de Audio|*.wav;*.mp3;*.alac;*.ALAC;*.WAV;*.AAC;*.MP3;"; // Valida tipo de archivo
-            ofd.ShowDialog();
-            CancionController.SaveFile(ofd.FileName);
+
         }
 
         private void MusicApp_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = CancionController.GetList();
+            dataGridView1.Columns["CancionId"].Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -49,7 +47,11 @@ namespace musicAPP
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Archivos de Audio|*.wav;*.mp3;*.alac;*.ALAC;*.WAV;*.AAC;*.MP3;"; // Valida tipo de archivo
+            ofd.ShowDialog();
+            CancionController.SaveFile(ofd.FileName);
+            MusicApp_Load(sender, e);
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -95,6 +97,16 @@ namespace musicAPP
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        
         }
     }
 }

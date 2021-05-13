@@ -19,8 +19,13 @@ namespace musicAPP.Controllers
             try
             {
                 var mediaInfo = new MediaInfo();
+                mediaInfo.Open(path);
                 model.Titulo = mediaInfo.Option("Title");
                 model.Album = "";
+                model.Artista = "Los Prisioneros";
+                model.Genero = "Rock";
+                model.Compositor = "Jorge Gonzalez";
+                model.Duracion = "";
                 model.Ubicacion = path;
                 using(ModelContext db = new ModelContext())
                 {
@@ -28,6 +33,12 @@ namespace musicAPP.Controllers
                     db.SaveChanges();
                 }
             } catch (FileNotFoundException) { }
+        }
+
+        public static List<Cancion> GetList()
+        {
+            ModelContext db = new ModelContext();
+            return db.Canciones.ToList();
         }
     }
 }
