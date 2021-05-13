@@ -42,3 +42,7 @@ C:\Users\Windows 10\Documents\GitHub\musicApp\musicAPP\obj\Debug\musicAPP.csproj
 C:\Users\Windows 10\Documents\GitHub\musicApp\musicAPP\obj\Debug\musicAPP.csproj.CopyComplete
 C:\Users\Windows 10\Documents\GitHub\musicApp\musicAPP\obj\Debug\musicAPP.exe
 C:\Users\Windows 10\Documents\GitHub\musicApp\musicAPP\obj\Debug\musicAPP.pdb
+C:\Users\Windows 10\Documents\GitHub\musicApp\musicAPP\bin\Debug\musicAPP.exe.manifest
+C:\Users\Windows 10\Documents\GitHub\musicApp\musicAPP\bin\Debug\musicAPP.application
+C:\Users\Windows 10\Documents\GitHub\musicApp\musicAPP\obj\Debug\musicAPP.exe.manifest
+C:\Users\Windows 10\Documents\GitHub\musicApp\musicAPP\obj\Debug\musicAPP.application
