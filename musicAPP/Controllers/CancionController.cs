@@ -1,5 +1,4 @@
-﻿using MediaInfoLib;
-using musicAPP.Models;
+﻿using musicAPP.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -18,14 +17,13 @@ namespace musicAPP.Controllers
 
             try
             {
-                var mediaInfo = new MediaInfo();
-                mediaInfo.Open(path);
-                model.Titulo = mediaInfo.Option("Title");
-                model.Album = "";
-                model.Artista = "Los Prisioneros";
-                model.Genero = "Rock";
-                model.Compositor = "Jorge Gonzalez";
-                model.Duracion = "";
+                TagLib.File tlf = TagLib.File.Create(path);
+                model.Titulo = tlf.Tag.Title;
+                model.Album = tlf.Tag.Album;
+                model.Artistas = String.Join(", ",tlf.Tag.Performers);
+                model.Generos = String.Join(", ",tlf.Tag.Genres);
+                model.Compositores = String.Join(", ",tlf.Tag.Composers);
+                model.Duracion = tlf.Properties.Duration.TotalSeconds;
                 model.Ubicacion = path;
                 using(ModelContext db = new ModelContext())
                 {
